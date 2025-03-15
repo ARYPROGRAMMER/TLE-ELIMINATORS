@@ -1,0 +1,75 @@
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+.content-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.content {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 24px;
+  width: 100%;
+  padding: 0 16px;
+  justify-content: center;
+}
+
+.card {
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+  background: var(--card-bg, #ffffff);
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+}
+
+/* Center section titles */
+h1, h2, h3, .section-title {
+  text-align: center;
+  width: 100%;
+}
+
+/* Add responsive design improvements */
+@media (max-width: 768px) {
+  .content-wrapper {
+    padding: 12px;
+  }
+  
+  .grid-container {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
